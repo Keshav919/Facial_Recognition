@@ -1,0 +1,14 @@
+# Data
+
+*.csv
+*.jpg
+*.png
+*.json
+*.txt
+*.npy
+
+#Cache
+__pycache__
+
+# Metadata
+.python-version
