@@ -72,7 +72,8 @@ if __name__ == '__main__':
     test_lab = labels[int(train_test_split*len(labels)):]
     
     # Write dataset
-    np.save(dataset_path+"num_faces.npy", nums)
+    unique, counts = np.unique(train_lab, return_counts=True)
+    np.save(dataset_path+"num_faces.npy", counts)
     
     with open(dataset_path+"train_im.txt", 'w') as f:
         f.write('\n'.join(train_im))
